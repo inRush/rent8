@@ -1,5 +1,15 @@
 <?php
 
+// 微信云托管环境：MYSQL_ADDRESS 格式为 "host:port"
+$mysqlAddress = getenv('MYSQL_ADDRESS');
+if ($mysqlAddress) {
+    $parts = explode(':', $mysqlAddress);
+    putenv('DB_HOST=' . $parts[0]);
+    putenv('DB_PORT=' . ($parts[1] ?? '3306'));
+}
+if (getenv('MYSQL_USERNAME')) putenv('DB_USER=' . getenv('MYSQL_USERNAME'));
+if (getenv('MYSQL_PASSWORD')) putenv('DB_PASS=' . getenv('MYSQL_PASSWORD'));
+
 return [
     // 默认使用的数据库连接配置
     'default'         => env('DB_DRIVER', 'mysql'),
