@@ -1,0 +1,32 @@
+composer.json
+  a077d4341c2574c0 48-55
+app/admin/controller/Common.php
+  a077d4341c2574c0 63
+config/database.php
+  a077d4341c2574c0 13-18
+Dockerfile
+  a077d4341c2574c0 1-17,20-22
+docker-compose.yml
+  a077d4341c2574c0 1-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "0.1.10-beta",
+  "base_commit_sha": "1a2392be5d6bd6022046ac818dc710e038f9eb24",
+  "prompts": {
+    "a077d4341c2574c0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fba6760f-ce28-4d03-8782-24052269aa32",
+        "model": "global.anthropic.claude-sonnet-4-6",
+        "ide_version": "2.1.81 (Claude Code)"
+      },
+      "human_author": "黄文杰 <wenjie.huang@trip.com>",
+      "messages": [],
+      "total_additions": 394,
+      "total_deletions": 326,
+      "accepted_lines": 93,
+      "overriden_lines": 3
+    }
+  }
+}
