@@ -10,6 +10,12 @@ if ($mysqlAddress) {
 if (getenv('MYSQL_USERNAME')) putenv('DB_USER=' . getenv('MYSQL_USERNAME'));
 if (getenv('MYSQL_PASSWORD')) putenv('DB_PASS=' . getenv('MYSQL_PASSWORD'));
 
+// Docker/系统环境变量直接覆盖（优先级高于 .env 文件）
+foreach (['DB_HOST', 'DB_PORT', 'DB_NAME', 'DB_USER', 'DB_PASS'] as $key) {
+    $val = getenv($key);
+    if ($val !== false) putenv("$key=$val");
+}
+
 return [
     // 默认使用的数据库连接配置
     'default'         => env('DB_DRIVER', 'mysql'),

@@ -60,7 +60,7 @@ class Common extends BaseController
             // 获取coze的token
             $appId = env('COZE_APP_ID'); // 替换为您的 APP_ID
             $publicKeyFingerprint = env('COZE_PUBLIC_KEY_FINGERPRINT'); // 替换为您的 PUBLIC_KEY_FINGERPRINT
-            $privateKeyFilePath = 'static/private_key.pem'; // 替换为您的私钥文件路径
+            $privateKeyFilePath = app()->getRootPath() . 'public/static/private_key.pem'; // 替换为您的私钥文件路径
             $jwt = $this->generateJWT($appId, $publicKeyFingerprint, $privateKeyFilePath);
             $accessToken = $this->getAccessToken($jwt);
             View::assign('coze_token', $accessToken);
