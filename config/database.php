@@ -16,6 +16,8 @@ foreach (['DB_HOST', 'DB_PORT', 'DB_NAME', 'DB_USER', 'DB_PASS'] as $key) {
     if ($val !== false) putenv("$key=$val");
 }
 
+error_log('[DB CONFIG] host=' . getenv('DB_HOST') . ' port=' . getenv('DB_PORT') . ' name=' . getenv('DB_NAME') . ' user=' . getenv('DB_USER'));
+
 return [
     // 默认使用的数据库连接配置
     'default'         => env('DB_DRIVER', 'mysql'),
