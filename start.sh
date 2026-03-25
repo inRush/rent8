@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "Waiting for MySQL..."
+echo "Waiting for MySQL Server ..."
 until php -r "\$p=new PDO('mysql:host='.getenv('DB_HOST').';port='.(getenv('DB_PORT')?:3306), getenv('DB_USER'), getenv('DB_PASS'));" 2>/dev/null; do
   echo "MySQL not ready, retrying in 2s..."
   sleep 2
