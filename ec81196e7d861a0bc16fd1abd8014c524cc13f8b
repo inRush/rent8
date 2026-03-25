@@ -1,0 +1,26 @@
+Dockerfile
+  a077d4341c2574c0 21-23,26
+start.sh
+  a077d4341c2574c0 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "0.1.10-beta",
+  "base_commit_sha": "ec81196e7d861a0bc16fd1abd8014c524cc13f8b",
+  "prompts": {
+    "a077d4341c2574c0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fba6760f-ce28-4d03-8782-24052269aa32",
+        "model": "global.anthropic.claude-sonnet-4-6",
+        "ide_version": "2.1.83 (Claude Code)"
+      },
+      "human_author": "黄文杰 <wenjie.huang@trip.com>",
+      "messages": [],
+      "total_additions": 15,
+      "total_deletions": 1,
+      "accepted_lines": 15,
+      "overriden_lines": 0
+    }
+  }
+}
