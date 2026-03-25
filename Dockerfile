@@ -18,6 +18,9 @@ RUN composer update --no-dev --optimize-autoloader --no-audit
 # 删除 .env，让容器使用环境变量
 # RUN mv -f .example.env .env
 
+COPY start.sh /app/start.sh
+RUN chmod +x /app/start.sh
+
 EXPOSE 80
 
-CMD php think migrate:run && php think seed:run && php -S 0.0.0.0:80 -t public public/router.php
+CMD ["/app/start.sh"]
