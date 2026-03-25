@@ -1,0 +1,24 @@
+config/database.php
+  a077d4341c2574c0 19-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "0.1.10-beta",
+  "base_commit_sha": "a8f81a6937c2473be2f722cf231228f67eecacc5",
+  "prompts": {
+    "a077d4341c2574c0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fba6760f-ce28-4d03-8782-24052269aa32",
+        "model": "global.anthropic.claude-sonnet-4-6",
+        "ide_version": "2.1.81 (Claude Code)"
+      },
+      "human_author": "黄文杰 <wenjie.huang@trip.com>",
+      "messages": [],
+      "total_additions": 81,
+      "total_deletions": 79,
+      "accepted_lines": 12,
+      "overriden_lines": 0
+    }
+  }
+}
