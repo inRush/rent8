@@ -16,7 +16,7 @@ COPY . .
 RUN composer update --no-dev --optimize-autoloader --no-audit
 
 # 删除 .env，让容器使用环境变量
-# RUN rm -f .env
+RUN mv -f .example.env .env
 
 EXPOSE 80
 
